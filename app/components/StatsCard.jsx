@@ -14,7 +14,7 @@ const StatsCard = () => {
         <div className="w-full h-[0.9px] dark:bg-neutral-600 bg-neutral-400/60 mt-1 top-7" />
       </div>
       <div className="mt-10 w-full flex justify-center items-center">
-        <h1 className="text-8xl">17</h1>
+        <h1 className="text-8xl">4</h1>
       </div>
     </motion.div>
   );
