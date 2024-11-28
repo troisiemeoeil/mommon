@@ -32,6 +32,9 @@ body {
   body {
     @apply dark:bg-[#161616] bg-[#F4F4F4] transition-all ease-in duration-200;
   }
+  :root {
+    --radius: 0.5rem;
+  }
 }
 
 @layer utilities {
