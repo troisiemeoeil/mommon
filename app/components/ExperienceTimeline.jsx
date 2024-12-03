@@ -1,12 +1,18 @@
 "use client";
+import { SquareArrowOutUpRight } from "lucide-react";
 
-const TimelineItem = ({ year, title, description }) => (
+const TimelineItem = ({ year, title, description, project, link }) => (
   <>
     <div className="flex gap-x-3 px-2">
-      <p className="dark:text-neutral-400 text-xs w-20 shrink-0">{year}</p>
-      <div>
+      <p className="dark:text-neutral-400 text-xs w-20 shrink-0">{year.start} - <br/> {year.end}</p>
+      <div className="w-full">
         <h4 className="text-xs font-bold">{title}</h4>
+        <div className="w-full  flex justify-between items-center ">
+          <p className="text-[11px] text-neutral-700 ">{project}</p>
+          <a href={link}><SquareArrowOutUpRight size={13} /></a>
+        </div>
         <p className="text-[11px] text-neutral-500">{description}</p>
+
       </div>
     </div>
     <div className="px-2 my-3">
@@ -18,55 +24,50 @@ const TimelineItem = ({ year, title, description }) => (
 const ExperienceTimeline = () => {
   const experiences = [
     {
-      year: "2002 -- 2012",
-      title: "Creative Studio Owner",
-      description: "Self-employed at my own creative studio, delivering innovative design solutions and giving value to your brand experience.",
+      year: {
+        start: "Oct 2022",
+        end: "Jul 2023",
+      },
+      title: "Korean Institute of Industrial Technology - South Korea",
+      description: "Software Developer (Contractor)",
+      project: "Product Analysis Dashboard for Government Server",
+      link: "https://eng.kitech.re.kr/main/",
     },
     {
-      year: "2020 -- 2022",
-      title: "Nike Headquarters",
-      description: "Designer & Creative Director",
+      year: {
+        start: "Aug 2022",
+        end: "Oct 2022",
+      },
+      title: "Harvestance Inc. - South Korea",
+      description: "Software Developer (Contractor)",
+      project: "3D Robot Gripper Customization Solution",
+      link: "https://www.harvestance.com/",
     },
     {
-      year: "2018 -- 2020",
-      title: "Spotify",
-      description: "Designer & Art Director",
+      year: {
+        start: "Feb 2022",
+        end: "Aug 2023",
+      },
+      title: "Onskad Fragrances - France",
+      description: "Software Developer (Contractor)",
+      project: "Custom Shopify E-commerce Theme ",
+      link: "https://onskadfragrances.com/",
     },
     {
-      year: "2016 -- 2018",
-      title: "Apple",
-      description: "Product Designer",
-    },
-    {
-      year: "2014 -- 2016",
-      title: "Royal Academy of Arts",
-      description: "Graduate Master's Degree",
-    },
-    {
-      year: "2012 -- 2016",
-      title: "Zurich University of Arts",
-      description: "Visual Communication",
-    },
-    {
-      year: "2011 -- 2012",
-      title: "Vogue France",
-      description: "Graphic Designer",
-    },
-    {
-      year: "2010 -- 2011",
-      title: "Vignelli Associates",
-      description: "Internship",
-    },
-    {
-      year: "2010 -- 2011",
-      title: "Norm Zurich",
-      description: "Internship",
-    },
+      year: {
+        start: "Feb 2022",
+        end: "Presen",
+      },
+      title: "Troisieme Oeil Digital",
+      description: "Founder & Manager",
+      project: "Product Analysis Dashboard for Government Server",
+      link: "https://troisiemeoeil.io/",
+    }
   ];
 
   return (
     <div className="dark:bg-[#1E1E1E] bg-white border dark:border-neutral-600 border-neutral-400/60 shadow-xl rounded-lg col-span-2 row-span-2 relative overflow-hidden">
-      <div className="absolute w-full p-2 z-20">
+      <div className="absolute w-full p-2 z-20 backdrop-blur-3xl">
         <p className="text-xs">Experience & Education</p>
         <div className="w-full h-[0.9px] dark:bg-neutral-600 bg-neutral-400/60 mt-1 top-7" />
       </div>

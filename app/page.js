@@ -42,8 +42,8 @@ function Homepage() {
   const { theme } = useTheme();
 
   return (
-    <div className=" w-full  px-4 pt-8 max-w-6xl mx-auto">
-      <div className="grid lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 gap-5 grid-flow-row-dense">
+    <div className=" w-full h-screen overflow-hidden  px-4 pt-8 max-w-6xl mx-auto">
+      <div className="grid lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 gap-3 grid-flow-row-dense">
        <LocationCard />
         <StatusCard />
         <AboutCard />

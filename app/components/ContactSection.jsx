@@ -13,12 +13,12 @@ const ContactSection = () => {
     {
       icon: <PiLinkedinLogoThin className="text-2xl" />,
       tooltip: "LinkedIn",
-      href: "linkedin.com/in/boulakhrasahmed",
+      href: "https://www.linkedin.com/in/boulakhrasahmed",
     },
     {
       icon: <PiGithubLogoThin className="text-xl" />,
       tooltip: "GitHub",
-      href: "github.com/troisiemeoeil",
+      href: "https://www.github.com/troisiemeoeil",
     },
     {
       icon: <PiInstagramLogoThin className="text-xl" />,
