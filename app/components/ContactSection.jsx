@@ -28,7 +28,7 @@ const ContactSection = () => {
     {
       icon: <IoIosMailUnread className="text-xl" />,
       tooltip: "E-mail",
-      href: "mailto:your-email@example.com",
+      href: "mailto:boulakhras.ahmed98@gmail.com",
     },
   ];
 

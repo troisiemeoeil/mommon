@@ -4,23 +4,12 @@ import Image from "next/image";
 
 const ProjectCard = ({ imageUrl }) => (
   <div className=" px-1 relative">
-    <div className="flex justify-between items-center p-2 gap-x-2 mt-4">
-      <Image
-        width={300}
-        height={300}
-        className="w-14 h-14 rounded-full object-cover"
-        src={imageUrl}
-        alt="Project thumbnail"
-      />
+    <div className="flex justify-between align-middle items-center p-2 gap-x-2 mt-6">
+ 
+        <p className="text-base">I've come up with something truly unique</p>
+    
 
-      <div>
-        <p className="text-xs">Fusion Pro Presentation</p>
-        <p className="text-xs">I've come up with something truly unique</p>
-      </div>
-
-      <ul className="menu">
-        <a href="#0"></a>
-      </ul>
+   
     </div>
   </div>
 );
