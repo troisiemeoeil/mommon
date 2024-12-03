@@ -8,8 +8,8 @@ const TimelineItem = ({ year, title, description, project, link }) => (
       <div className="w-full">
         <h4 className="text-xs font-bold">{title}</h4>
         <div className="w-full  flex justify-between items-center ">
-          <p className="text-[11px] text-neutral-700 ">{project}</p>
-          <a href={link}><SquareArrowOutUpRight size={13} /></a>
+          <p className="text-[11px] text-neutral-300 ">{project}</p>
+          <a href={link} target="_blank"><SquareArrowOutUpRight size={13} /></a>
         </div>
         <p className="text-[11px] text-neutral-500">{description}</p>
 
@@ -28,7 +28,7 @@ const ExperienceTimeline = () => {
         start: "Oct 2022",
         end: "Jul 2023",
       },
-      title: "Korean Institute of Industrial Technology - South Korea",
+      title: "KITECH - South Korea",
       description: "Software Developer (Contractor)",
       project: "Product Analysis Dashboard for Government Server",
       link: "https://eng.kitech.re.kr/main/",

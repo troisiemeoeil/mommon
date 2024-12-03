@@ -42,7 +42,7 @@ function Homepage() {
   const { theme } = useTheme();
 
   return (
-    <div className=" w-full h-screen overflow-hidden  px-4 pt-8 max-w-6xl mx-auto">
+    <div className=" w-full h-screen   px-4 pt-8 max-w-7xl mx-auto">
       <div className="grid lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 gap-3 grid-flow-row-dense">
        <LocationCard />
         <StatusCard />
@@ -52,7 +52,6 @@ function Homepage() {
         <ContactSection />
         <LatestWorkCard />
         <SideProjectsTimeline />
-        <NewsletterCard />
         <TestimonialCard />
         <div className="  rounded-lg  grid grid-cols-2 gap-2 col-span-2 row-span-2 z-40">
           <StatsCard />

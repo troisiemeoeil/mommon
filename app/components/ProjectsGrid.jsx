@@ -2,7 +2,7 @@
 import Image from "next/image";
 
 const ProjectCard = ({ imageUrl }) => (
-  <div className="bg-[#F5F5F5] dark:bg-[#1B1B1B] rounded-md px-1 relative">
+  <div className=" rounded-md px-1 relative">
     <div className="flex justify-between items-center p-2 gap-x-2 mt-4">
       <Image
         width={300}

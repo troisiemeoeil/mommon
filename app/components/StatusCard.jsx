@@ -19,7 +19,7 @@ const StatusCard = () => {
         <div className="w-full h-[0.9px] dark:bg-neutral-600 bg-neutral-400/60 mt-1 top-7" />
         <div>
           <p className="text-xs font-semibold max-sm:mt-16 sm:mt-4">
-            Available for freelance <br /> design projects. Hit me up <br /> for a collab 🦾
+            Available for hire as a freelance or a part of your team.<br />Hit me up for a collab 🦾
           </p>
 
           <button className="text-xs flex w-full items-center justify-between border dark:border-neutral-600 border-neutral-400/60 mt-3 rounded-full p-1 px-2 dark:bg-neutral-700/40 sm:w-full">

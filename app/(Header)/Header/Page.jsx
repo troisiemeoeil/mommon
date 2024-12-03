@@ -103,9 +103,9 @@ function HeaderPage() {
             height: 0,
             transition: { delay: 0.7, duration: 0.3 },
           }}
-          className="mx-auto w-full z-50 flex justify-center fixed top-0 "
+          className="mx-auto w-full dark:bg-black bg-[#F4F4F4] z-50 flex justify-center fixed top-0 "
         >
-          <div className="cursor-pointer bg-[#343434]    hover:text-neutral-700 border-neutral-600 border border-t-0  w-[110px] flex-col overflow-hidden rounded-b-xl break-all ">
+          <div className="cursor-pointer bg-[#343434]     hover:text-neutral-700 border-neutral-600 border border-t-0  w-[110px] flex-col overflow-hidden rounded-b-xl break-all ">
             <div
               onClick={handleClick}
               className="text-[12px] text-center mt-1 text-neutral-200 group-hover/sidebar:opacity-100 transition-all font-bold ease-out duration-700 "
