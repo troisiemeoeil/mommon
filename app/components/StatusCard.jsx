@@ -23,7 +23,9 @@ const StatusCard = () => {
           </p>
 
           <button className="text-xs flex w-full items-center justify-between border dark:border-neutral-600 border-neutral-400/60 mt-3 rounded-full p-1 px-2 dark:bg-neutral-700/40 sm:w-full">
-            <span>Contact me</span>
+            <a href="mailto:boulakhras.ahmed98@gmail.com">
+              <span>Contact me</span>
+              </a>
             <PiArrowUpRight />
           </button>
         </div>
