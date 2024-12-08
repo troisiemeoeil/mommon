@@ -22,7 +22,7 @@ function Homepage() {
   const width = useWindowWidth();
 
   return (
-    <div className="w-full h-screen px-4 pt-8 max-w-6xl mx-auto">
+    <div className="w-full h-screen px-4 pt-8 max-w-6xl mx-auto ">
       <div className="grid lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 gap-3 grid-flow-row-dense">
         <LocationCard />
         {width > 640 && <StatusCard />} {/* Render only if width is greater than 640px */}
