@@ -45,6 +45,7 @@ const ContactSection = () => {
             <Tooltip key={index} showArrow={true} content={link.tooltip} color="#161616">
               <Link
                 href={link.href}
+                target="_blank"
                 className="rounded-full border dark:border-neutral-600 cursor-pointer border-neutral-400/60 p-2 w-16 h-16 flex items-center justify-center"
               >
                 {link.icon}

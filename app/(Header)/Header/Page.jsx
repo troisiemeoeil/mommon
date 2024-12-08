@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React from "react";
 
 import { AnimatePresence, motion, useCycle } from "framer-motion";
 
 import { useState } from "react";
+
 import { useTheme } from "next-themes";
 import { PiArrowRightThin } from "react-icons/pi";
 import Image from "next/image";
@@ -14,16 +15,8 @@ function HeaderPage() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
   const [hoverTheme, setHovertheme] = useState(null);
-  const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { theme, systemTheme, setTheme } = useTheme();
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null; // or a loading skeleton
-  }
   const links = [
     { name: "/jo1.jpeg", theme: "dark" },
     { name: "/jo2.jpeg", theme: "light" },
@@ -110,9 +103,9 @@ function HeaderPage() {
             height: 0,
             transition: { delay: 0.7, duration: 0.3 },
           }}
-          className="mx-auto w-full dark:bg-black bg-[#F4F4F4] z-50 flex justify-center fixed top-0 "
+          className="mx-auto w-full z-50 flex justify-center fixed top-0 "
         >
-          <div className="cursor-pointer bg-[#343434]     hover:text-neutral-700 border-neutral-600 border border-t-0  w-[110px] flex-col overflow-hidden rounded-b-xl break-all ">
+          <div className="cursor-pointer bg-[#343434]    hover:text-neutral-700 border-neutral-600 border border-t-0  w-[110px] flex-col overflow-hidden rounded-b-xl break-all ">
             <div
               onClick={handleClick}
               className="text-[12px] text-center mt-1 text-neutral-200 group-hover/sidebar:opacity-100 transition-all font-bold ease-out duration-700 "
@@ -130,7 +123,7 @@ function HeaderPage() {
 
             {/*  */}
 
-            <div className="bg-black overflow-hidden  h-fit rounded-xl mt-1">
+            <div className="bg-[#161616] overflow-hidden  h-fit rounded-xl mt-1">
               {open && (
                 <div className="gap-x-1 flex justify-center">
                   {links.map(({ name, theme }, index) => {
@@ -138,7 +131,7 @@ function HeaderPage() {
                     return (
                       <>
                         <motion.div
-                          key={Math.random()}
+                          key={index}
                           onClick={() => setActiveIndex(index)}
                           onMouseEnter={() => setActiveIndex(index)}
                           className=" relative rounded-md text-neutral-400 flex  transition-all ease-in duration-200    "
@@ -158,7 +151,7 @@ function HeaderPage() {
                             onMouseLeave={() => setHovertheme(null)}
                             className="w-8 h-8 opacity-25 duration-500 transition-all ease-in hover:opacity-100 object-cover rounded-full"
                             src={name}
-                            alt="theme switcher"
+                            alt=""
                           />
                         </motion.div>
                       </>
