@@ -19,7 +19,7 @@ const TestimonialCard = () => {
   useEffect(() => {
     async function updateQuote() {
       try {
-        const response = await fetch("https://api.api-ninjas.com/v1/quotes?category=best", {
+        const response = await fetch("https://api.api-ninjas.com/v1/quotes?category=success", {
           headers: {
             "X-Api-Key": "qJd5X0UDNmwe3Nx+/+fINw==dOlh6aSj5deYrZCY", // Replace YOUR_API_KEY with the actual API key
           },
