@@ -1,23 +1,6 @@
 "use client";
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import {
-  PiArrowUpRight,
-  PiLinkedinLogoThin,
-  PiBehanceLogoThin,
-  PiArrowDownThin,
-  PiGithubLogoThin,
-  PiInstagramLogoThin
-} from "react-icons/pi";
-
-import { IoIosMailUnread } from "react-icons/io";
-
-import { RiTwitterXLine } from "react-icons/ri";
-
+import React from "react";
 import { useTheme } from "next-themes";
-
-import { Tooltip } from "@nextui-org/react";
-
 import Link from "next/link";
 import Image from "next/image";
 import ProjectsGrid from "./components/ProjectsGrid";
@@ -32,20 +15,17 @@ import StatusCard from "./components/StatusCard";
 import TestimonialCard from "./components/TestimonialCard";
 import NewsletterCard from "./components/NewsletterCard";
 import LocationCard from "./components/LocationCard";
-// let Icons = [
-//   { name: <PiTwitterLogoThin />, href: "https://twitter.com/Joenaldo" },
-//   { name: <PiInstagramLogoThin />, href: "https://instagram.com/Joscriptt " },
-//   { name: <PiGithubLogoLight />, href: "https://github.com/Joscriptt" },
-// ];
+import { useWindowWidth } from "./Hooks/useWindowWidth";
 
 function Homepage() {
   const { theme } = useTheme();
+  const width = useWindowWidth();
 
   return (
-    <div className=" w-full h-screen   px-4 pt-8 max-w-7xl mx-auto">
+    <div className="w-full h-screen px-4 pt-8 max-w-6xl mx-auto">
       <div className="grid lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 gap-3 grid-flow-row-dense">
-       <LocationCard />
-        <StatusCard />
+        <LocationCard />
+        {width > 640 && <StatusCard />} {/* Render only if width is greater than 640px */}
         <AboutCard />
         <ExperienceTimeline />
         <ProjectsGrid />
@@ -53,7 +33,7 @@ function Homepage() {
         <LatestWorkCard />
         <SideProjectsTimeline />
         <TestimonialCard />
-        <div className="  rounded-lg  grid grid-cols-2 gap-2 col-span-2 row-span-2 z-40">
+        <div className="rounded-lg grid grid-cols-2 gap-2 col-span-2 row-span-2 z-40">
           <StatsCard />
           <CVCard />
         </div>

@@ -3,7 +3,7 @@ import { PiArrowUpRight } from "react-icons/pi";
 
 const StatusCard = () => {
   return (
-    <div className="dark:bg-[#1E1E1E] bg-white border dark:border-neutral-600 border-neutral-400/60 shadow-xl relative rounded-lg sm:h-40">
+    <div className=" dark:bg-[#1E1E1E] bg-white border dark:border-neutral-600 border-neutral-400/60 shadow-xl relative rounded-lg sm:h-40">
       <div className="absolute w-full p-2">
         <div className="flex justify-between items-center">
           <p className="text-xs">Mode</p>

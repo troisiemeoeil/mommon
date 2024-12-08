@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { PiArrowUpRight, PiArrowDownThin } from "react-icons/pi";
 
 const CVCard = () => {
@@ -11,14 +12,20 @@ const CVCard = () => {
         </div>
       </div>
       <div className="mt-24 w-full">
+          <Link href="https://drive.google.com/file/d/1j4W6iRG7bzS1vG63nxvFIVOuj4qv5D7g/view?usp=sharing" target="_blank">
         <button className="text-xs flex w-full items-center justify-between border dark:border-neutral-600 border-neutral-400/60 rounded-full p-1 px-2 dark:bg-neutral-700/40">
           <span>View</span>
           <PiArrowUpRight />
+        
         </button>
+          </Link>
+          <Link href="https://drive.google.com/file/d/1j4W6iRG7bzS1vG63nxvFIVOuj4qv5D7g/view?usp=sharing" target="_blank">
         <button className="text-xs flex w-full mt-3 items-center justify-between border dark:border-neutral-600 border-neutral-400/60 rounded-full p-1 px-2 dark:bg-neutral-700/40">
           <span>Download</span>
           <PiArrowDownThin />
+          
         </button>
+          </Link>
       </div>
     </div>
   );

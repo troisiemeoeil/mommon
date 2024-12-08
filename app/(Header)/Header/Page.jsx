@@ -1,11 +1,10 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 
 import { AnimatePresence, motion, useCycle } from "framer-motion";
 
 import { useState } from "react";
-
 import { useTheme } from "next-themes";
 import { PiArrowRightThin } from "react-icons/pi";
 import Image from "next/image";
@@ -15,8 +14,16 @@ function HeaderPage() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
   const [hoverTheme, setHovertheme] = useState(null);
-  const { theme, systemTheme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null; // or a loading skeleton
+  }
   const links = [
     { name: "/jo1.jpeg", theme: "dark" },
     { name: "/jo2.jpeg", theme: "light" },
@@ -123,7 +130,7 @@ function HeaderPage() {
 
             {/*  */}
 
-            <div className="bg-[#161616] overflow-hidden  h-fit rounded-xl mt-1">
+            <div className="bg-black overflow-hidden  h-fit rounded-xl mt-1">
               {open && (
                 <div className="gap-x-1 flex justify-center">
                   {links.map(({ name, theme }, index) => {
@@ -131,7 +138,7 @@ function HeaderPage() {
                     return (
                       <>
                         <motion.div
-                          key={index}
+                          key={Math.random()}
                           onClick={() => setActiveIndex(index)}
                           onMouseEnter={() => setActiveIndex(index)}
                           className=" relative rounded-md text-neutral-400 flex  transition-all ease-in duration-200    "
@@ -151,7 +158,7 @@ function HeaderPage() {
                             onMouseLeave={() => setHovertheme(null)}
                             className="w-8 h-8 opacity-25 duration-500 transition-all ease-in hover:opacity-100 object-cover rounded-full"
                             src={name}
-                            alt=""
+                            alt="theme switcher"
                           />
                         </motion.div>
                       </>

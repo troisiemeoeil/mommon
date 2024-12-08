@@ -68,7 +68,7 @@ const ExperienceTimeline = () => {
   return (
     <div className="dark:bg-[#1E1E1E] bg-white border dark:border-neutral-600 border-neutral-400/60 shadow-xl rounded-lg col-span-2 row-span-2 relative overflow-hidden">
       <div className="absolute w-full p-2 z-20 backdrop-blur-3xl">
-        <p className="text-xs">Experience & Education</p>
+        <p className="text-xs">Professional Experience</p>
         <div className="w-full h-[0.9px] dark:bg-neutral-600 bg-neutral-400/60 mt-1 top-7" />
       </div>
 

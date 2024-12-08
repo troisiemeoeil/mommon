@@ -7,7 +7,7 @@ export default  function AnimatedShinyTextDemo( { name, title, phone }) {
     <div className="z-10 flex min-h-64 items-center justify-center">
       <div
         className={cn(
-          "group   text-white transition-all ease-in dark:bg-neutral-900 hover:text-black dark:hover:text-white",
+          "group   text-white transition-all ease-in  hover:text-black dark:hover:text-white",
         )}
       >
         <AnimatedShinyText className="flex-col flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">

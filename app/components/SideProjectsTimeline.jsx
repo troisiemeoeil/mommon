@@ -1,12 +1,12 @@
 "use client";
 
-const TimelineItem = ({ year, title, description }) => (
+const TimelineItem = ({ year, degree, institution }) => (
   <>
     <div className="flex gap-x-3 px-2">
       <p className="dark:text-white text-xs w-20 shrink-0">{year}</p>
       <div>
-        <h4 className="text-xs font-bold">{title}</h4>
-        <p className="text-[11px] text-neutral-500">{description}</p>
+        <h4 className="text-xs font-bold">{degree}</h4>
+        <p className="text-[11px] text-neutral-500">{institution}</p>
       </div>
     </div>
     <div className="px-2 my-3">
@@ -18,26 +18,32 @@ const TimelineItem = ({ year, title, description }) => (
 const SideProjectsTimeline = () => {
   const projects = [
     {
-      year: "Since 2023",
-      title: "WebFlow",
-      description: "Official partner",
+      year: "Since 2024",
+      degree: "BBA - Entreprise Ressource Planning",
+      institution: "Centria University of Applied Sciences - Finland",
     },
     {
-      year: "Since 2021",
-      title: "Awwward",
-      description: "Jury Member",
+      year: "July - 2023",
+      degree: "IELTS Academic Certificate - C1 Level",
+      institution: "British Council",
     },
     {
-      year: "Since 2018",
-      title: "ADC Club Global",
-      description: "Jury Member",
+      year: "2016 - 2020",
+      degree: "Bsc. in Computer Science",
+      institution: "University of Manar - Tunisia",
+    
+    },
+    {
+      year: "2016",
+      degree: "Baccaulereate in Science - Physics",
+      institution: "High School of Rue de Marseille - Tunisia",
     },
   ];
 
   return (
     <div className="dark:bg-[#1E1E1E] bg-white border dark:border-neutral-600 border-neutral-400/60 shadow-xl rounded-lg col-span-2 relative overflow-hidden">
       <div className="absolute w-full p-2 z-20">
-        <p className="text-xs">Side Projects</p>
+        <p className="text-xs">Education timeline</p>
         <div className="w-full h-[0.9px] dark:bg-neutral-600 bg-neutral-400/60 mt-1 top-7" />
       </div>
 

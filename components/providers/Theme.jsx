@@ -1,17 +1,10 @@
 "use client";
+import { ThemeProvider } from 'next-themes';
 
-import { ThemeProvider } from "next-themes";
-
-function Theming({ children }) {
+export default function Theming({ children }) {
   return (
-    <ThemeProvider
-      // storageKey="joscript-theme"
-      enableSystem
-      // disableTransitionOnChange
-      attribute="class"
-    >
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       {children}
     </ThemeProvider>
   );
 }
-export default Theming;
