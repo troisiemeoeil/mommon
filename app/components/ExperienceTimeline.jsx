@@ -75,7 +75,7 @@ const ExperienceTimeline = () => {
       <div className="bg-gradient-to-b w-full absolute z-10 from-white via-white dark:from-[#1E1E1E] dark:via-[#1E1E1E] to-transparent h-20 transition-all ease-in duration-200" />
 
       <div className="overflow-y-auto h-[340px] overflow-hidden scrollbar-hide scroll-smooth relative">
-        <div className="mt-16">
+        <div className="mt-16 mb-8 ">
           {experiences.map((exp, index) => (
             <TimelineItem key={index} {...exp} />
           ))}
