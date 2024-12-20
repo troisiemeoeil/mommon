@@ -57,6 +57,11 @@ const ProjectsGrid = () => {
       link: "https://stlmaker.vercel.app"
     },
     {
+      project: " Products Texture configurator",
+      tech: "Three.js / Next.js / IMGly SDK / Tailwind",
+      link: "https://printable-kohl.vercel.app/"
+    },
+    {
       project: "Realtime Decal Projector ",
       tech: "Babylon.js / React.js / Tailwind / Pixi.js / Express.js",
       link: "https://boltattoo.vercel.app/"
