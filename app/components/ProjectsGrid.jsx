@@ -1,6 +1,7 @@
 "use client";
 import { SquareArrowOutUpRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 
 
@@ -29,11 +30,13 @@ const ProjectCard = ({ project, tech, link, index }) => (
   //   </div>
   // </div>
 <>
-<div className="flex gap-x-3 px-2">
+<div className="flex gap-x-3 px-2 ">
       <div className="w-full">
         <div className="w-full  flex justify-between items-center ">
         <h4 className="text-xs font-bold">{project}</h4>
-          <a href={link} target="_blank"><SquareArrowOutUpRight size={13} /></a>
+        <Link href={link} target="_blank">
+        <SquareArrowOutUpRight size={13} />
+        </Link>
         </div>
         <p className="text-[11px] text-neutral-500">Tech stack: {tech}</p>
 
@@ -47,10 +50,11 @@ const ProjectCard = ({ project, tech, link, index }) => (
 
 const ProjectsGrid = () => {
   const content = [
+ 
     {
       project: "Dynamic Printable files configurator",
       tech: "Three.js / Vite.js / React.js / Tailwind",
-      link: "https://stlmaker.vercel.app/"
+      link: "https://stlmaker.vercel.app"
     },
     {
       project: "Realtime Decal Projector ",
@@ -80,7 +84,7 @@ const ProjectsGrid = () => {
 <div className="bg-gradient-to-b w-full absolute z-10 from-white via-white dark:from-[#1E1E1E] dark:via-[#1E1E1E] to-transparent h-20 transition-all ease-in duration-200" />
 
 <div className="overflow-y-auto h-[340px] overflow-hidden scrollbar-hide scroll-smooth relative">
-  <div className="mt-16">
+  <div className="mt-20">
   {content.map((exp, index) => (
             <ProjectCard key={index} {...exp} />
           ))}
