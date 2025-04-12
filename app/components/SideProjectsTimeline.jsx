@@ -18,8 +18,8 @@ const TimelineItem = ({ year, degree, institution }) => (
 const SideProjectsTimeline = () => {
   const projects = [
     {
-      year: "Since 2024",
-      degree: "BBA - Entreprise Ressource Planning",
+      year: "Since 2021",
+      degree: "Masters in Computer Science",
       institution: "Centria University of Applied Sciences - Finland",
     },
     {
@@ -43,7 +43,7 @@ const SideProjectsTimeline = () => {
   return (
     <div className="dark:bg-[#1E1E1E] bg-white border dark:border-neutral-600 border-neutral-400/60 shadow-xl rounded-lg col-span-2 relative overflow-hidden">
       <div className="absolute w-full p-2 z-20">
-        <p className="text-xs">Education timeline</p>
+        <p className="text-xs">Education</p>
         <div className="w-full h-[0.9px] dark:bg-neutral-600 bg-neutral-400/60 mt-1 top-7" />
       </div>
 
