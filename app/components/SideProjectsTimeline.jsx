@@ -17,11 +17,11 @@ const TimelineItem = ({ year, degree, institution }) => (
 
 const SideProjectsTimeline = () => {
   const projects = [
-    {
-      year: "Since 2021",
-      degree: "Masters in Computer Science",
-      institution: "Centria University of Applied Sciences - Finland",
-    },
+    // {
+    //   year: "Since 2021",
+    //   degree: "Masters in Computer Science",
+    //   institution: "Centria University of Applied Sciences - Finland",
+    // },
     {
       year: "July - 2023",
       degree: "IELTS Academic Certificate - C1 Level",
